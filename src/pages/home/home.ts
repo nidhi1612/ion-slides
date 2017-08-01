@@ -85,6 +85,7 @@ ionViewDidLoad(){
        else if(this.platform.width() >= 768 && this.platform.width() <= 1920)
         {
           this.slider.slidesPerView = 3;
+          this.slide2.slidesPerView = 2;
           this.slider.spaceBetween = 20;
           this.slider.resize();
         }
