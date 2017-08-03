@@ -92,8 +92,12 @@ ionViewDidLoad(){
       
     });
   }
-  
 
+  ionViewDidEnter(){
+    this.slider.freeMode = true;
+    this.slider.slidesPerView = 2;
+    this.slider.update();
+  }
 
   }
 
