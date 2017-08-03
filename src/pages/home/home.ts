@@ -17,7 +17,7 @@ export class HomePage {
  
 
   @ViewChild(Slides) slider: Slides;
-   @ViewChild(Slides) slide2: Slides;
+   // @ViewChild(Slides) slide2: Slides;
 width = document.documentElement.clientWidth;
   constructor(private _audioProvider: AudioProvider,public platform:Platform) {
     const $resizeEvent = Observable.fromEvent(window, 'resize')
@@ -85,7 +85,7 @@ ionViewDidLoad(){
        else if(this.platform.width() >= 768 && this.platform.width() <= 1920)
         {
           this.slider.slidesPerView = 3;
-          this.slide2.slidesPerView = 2;
+          // this.slide2.slidesPerView = 2;
           this.slider.spaceBetween = 20;
           this.slider.resize();
         }
