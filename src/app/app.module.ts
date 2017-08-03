@@ -6,28 +6,37 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { IonicAudioModule, AudioProvider, WebAudioProvider, defaultAudioProviderFactory } from 'ionic-audio';
+import { IonicAudioModule, defaultAudioProviderFactory } from 'ionic-audio';
+import { Slider1Page } from "../pages/slider1/slider1";
+import { Slider2Page } from "../pages/slider2/slider2";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    Slider1Page,
+    Slider2Page
+    
     
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicAudioModule.forRoot(defaultAudioProviderFactory)
+    IonicAudioModule.forRoot(defaultAudioProviderFactory),
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    
   ],
+  
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    
+  ],
 })
 export class AppModule {}
